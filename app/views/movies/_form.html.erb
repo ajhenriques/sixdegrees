@@ -1,0 +1,14 @@
+<div class="well">
+<%= form_tag '/xml_upload', :multipart => true do %>
+  <div class="control-group">
+    <%= label_tag "Load Movies from XML" %>
+    <div class="controls">
+      <%= file_field_tag :xml_file, :default => "test.xml" %>
+      <%= submit_tag "Load XML", :class => 'btn btn-primary btn-mini' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  movies_path, :class => 'btn btn-mini' %>
+    </div>
+    
+  </div>
+<% end %>
+</div>
