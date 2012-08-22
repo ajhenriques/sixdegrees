@@ -75,10 +75,6 @@ class Graph < Array
       end
       vertices.delete nearest_vertex
     end
-    if dst
-      return nil
-    else
-      return distances
-    end
+    nil
   end
 end
